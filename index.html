@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoldEx - Premium Currency Converter</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--primary-gold); font-size: 1.5rem;">
+                <i class="fas fa-coins me-2"></i>GoldEx
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#converter">Converter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#currencies">Currencies</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <button class="btn btn-outline-warning btn-sm theme-toggle" id="themeToggle"
+                            title="Toggle Theme">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="floating-elements">
+            <i class="fas fa-coins floating-coin"
+                style="top: 20%; left: 10%; font-size: 2rem; animation-delay: 0s;"></i>
+            <i class="fas fa-dollar-sign floating-coin"
+                style="top: 60%; left: 80%; font-size: 1.5rem; animation-delay: 2s;"></i>
+            <i class="fas fa-euro-sign floating-coin"
+                style="top: 30%; left: 70%; font-size: 2.5rem; animation-delay: 4s;"></i>
+            <i class="fas fa-pound-sign floating-coin"
+                style="top: 70%; left: 20%; font-size: 1.8rem; animation-delay: 1s;"></i>
+        </div>
+
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">GoldEx</h1>
+                    <p class="hero-subtitle">
+                        Konversi mata uang secara cepat dan akurat dengan tampilan yang sederhana dan mudah digunakan.
+                        Dapatkan nilai tukar terbaru dari berbagai negara secara real-time.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn cta-button" onclick="scrollToConverter()">
+                            <i class="fas fa-exchange-alt me-2"></i>Mulai Konversi
+                        </button>
+                        <button class="btn btn-outline-light" onclick="showAllCurrencies()">
+                            <i class="fas fa-list me-2"></i>Lihat Mata Uang
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <div class="position-relative">
+                        <i class="fa-solid fa-money-bill-transfer"
+                            style="font-size: 15rem; color: var(--primary-gold); opacity: 0.8;"></i>
+                        <div
+                            class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+                            <div class="text-center">
+                                <h3 class="text-light mb-3">170+ Currencies</h3>
+                                <p class="text-light">Real-time Exchange Rates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="170">0</div>
+                        <div class="stat-label">Currencies</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="99">0</div>
+                        <div class="stat-label">% Accuracy</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">Hours Available</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="1000000">0</div>
+                        <div class="stat-label">Users</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-4" style="color: var(--primary-gold);">Fitur Premium</h2>
+                <p class="lead text-light">Kenapa memilih GoldEx untuk kebutuhan konversi mata uang Anda?</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="feature-title">Real-time Updates</h3>
+                        <p class="feature-description">
+                            Data nilai tukar yang selalu update setiap detik dari sumber terpercaya
+                            untuk akurasi maksimal dalam setiap transaksi.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Secure & Reliable</h3>
+                        <p class="feature-description">
+                            Sistem keamanan tingkat bank dengan enkripsi SSL dan
+                            backup data otomatis untuk melindungi informasi Anda.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 class="feature-title">Global Coverage</h3>
+                        <p class="feature-description">
+                            Mendukung 170+ mata uang dari seluruh dunia dengan
+                            data yang akurat dan terpercaya dari berbagai negara.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3 class="feature-title">History Tracking</h3>
+                        <p class="feature-description">
+                            Simpan dan lacak semua riwayat konversi Anda dengan
+                            fitur history yang lengkap dan mudah diakses.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Mobile Friendly</h3>
+                        <p class="feature-description">
+                            Interface responsif yang bekerja sempurna di semua
+                            device - desktop, tablet, maupun smartphone.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="feature-title">Analytics</h3>
+                        <p class="feature-description">
+                            Analisis mendalam terhadap trend mata uang dengan
+                            grafik interaktif dan laporan yang komprehensif.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Converter Section -->
+    <section id="converter" class="converter-section">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-4" style="color: var(--primary-gold);">Currency Converter</h2>
+                <p class="lead text-light">Konversi mata uang dengan cepat dan akurat</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="converter-card" data-aos="fade-up" data-aos-delay="200">
+                        <form id="converterForm">
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label text-light fw-semibold">
+                                        <i class="fas fa-arrow-up me-2" style="color: var(--primary-gold);"></i>
+                                        Dari Mata Uang
+                                    </label>
+                                    <select class="form-select" id="fromCurrency" required>
+                                        <option value="">Pilih mata uang asal...</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-light fw-semibold">
+                                        <i class="fas fa-arrow-down me-2" style="color: var(--primary-gold);"></i>
+                                        Ke Mata Uang
+                                    </label>
+                                    <select class="form-select" id="toCurrency" required>
+                                        <option value="">Pilih mata uang tujuan...</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label text-light fw-semibold">
+                                    <i class="fas fa-calculator me-2" style="color: var(--primary-gold);"></i>
+                                    Jumlah
+                                </label>
+                                <input type="number" class="form-control" id="amount" placeholder="Masukkan jumlah..."
+                                    step="0.01" min="0" required>
+                            </div>
+
+                            <button type="submit" class="btn cta-button w-100 py-3">
+                                <i class="fas fa-exchange-alt me-2"></i>
+                                <span class="loading-spinner spinner-border spinner-border-sm me-2"
+                                    role="status"></span>
+                                <span id="convertButtonText">Konversi Sekarang</span>
+                            </button>
+                        </form>
+
+                        <div id="conversionResult" class="result-card">
+                            <div class="result-amount" id="resultAmount"></div>
+                            <div class="result-rate" id="resultRate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currencies Section -->
+    <section id="currencies" class="py-5" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-4" style="color: var(--primary-gold);">Mata Uang Tersedia</h2>
+                <p class="lead text-light">Lebih dari 170 mata uang dari seluruh dunia</p>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card bg-dark border-warning" data-aos="fade-up">
+                        <div class="card-header bg-gradient text-light text-center"
+                            style="background: var(--gradient-primary);">
+                            <h5 class="mb-0 fw-bold">
+                                <i class="fas fa-list me-2"></i>Daftar Semua Mata Uang
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="currencyLoading" class="text-center py-4" style="display: none;">
+                                <div class="spinner-border text-warning" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mt-2 text-light">Memuat daftar mata uang...</p>
+                            </div>
+                            <div id="currencyList" class="row g-2" style="max-height: 400px; overflow-y: auto;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="py-5" style="background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-4 fw-bold mb-4" style="color: var(--primary-gold);">Riwayat Konversi</h2>
+                <p class="lead text-light">Lacak semua konversi yang pernah Anda lakukan</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card bg-dark border-warning" data-aos="fade-up">
+                        <div class="card-header bg-gradient text-light text-center"
+                            style="background: var(--gradient-primary);">
+                            <h5 class="mb-0 fw-bold">
+                                <i class="fas fa-history me-2"></i>History Transaksi
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div id="historyList" style="max-height: 300px; overflow-y: auto;">
+                                <div class="text-center text-muted py-4">
+                                    <i class="fas fa-clock fa-3x mb-3" style="color: var(--secondary-gold);"></i>
+                                    <p>Belum ada riwayat konversi</p>
+                                    <small>Lakukan konversi pertama Anda untuk melihat history di sini</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-brand mb-3">GoldEx</h3>
+                    <p class="text-muted">
+                        Platform konversi mata uang terpercaya dengan teknologi terkini untuk memberikan nilai tukar
+                        real-time yang akurat dan
+                        mudah diakses.
+                    </p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="instagram.com/tikature"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dewi-atika-muthi"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-light mb-3">Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="#home">Home</a><br>
+                        <a href="#features">Features</a><br>
+                        <a href="#converter">Converter</a><br>
+                        <a href="#currencies">Currencies</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="text-light mb-3">Contact Info</h5>
+                    <p class="text-muted">
+                        <i class="fas fa-envelope me-2" style="color: var(--primary-gold);"></i>
+                        detikaa10@gmail.com
+                    </p>
+                    <p class="text-muted">
+                        <i class="fas fa-phone me-2" style="color: var(--primary-gold);"></i>
+                        +62 123 456 789
+                    </p>
+                    <p class="text-muted">
+                        <i class="fas fa-map-marker-alt me-2" style="color: var(--primary-gold);"></i>
+                        Bandung, Indonesia
+                    </p>
+                </div>
+            </div>
+            <hr style="border-color: var(--dark-gold);">
+            <div class="text-center py-3">
+                <p class="text-muted mb-0">
+                    © 2025 GoldEx. All rights reserved. Made with
+                    <i class="fas fa-heart" style="color: var(--primary-gold);"></i>
+                    for better currency conversion experience.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+
+</html>
