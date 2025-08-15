@@ -33,21 +33,17 @@ Go Currency Converter is a **Golang-based** web application that allows users to
 ---
 ### 🔍 All Currencies
 <p align="center">
-  <img src="captures/create-lp.png" height="250"/>
-  <img src="captures/login-lp.png" height="250"/>
-  <br>
-  <img src="captures/create-hp.png" height="250"/>
-  <img src="captures/login-hp.png" height="250"/>
+  <img src="captures/all-lp.png" height="150"/>
+  <img src="captures/all-hp.png" height="150"/>
 </p>
 
 ---
 ### 💭 Conversion Result 
 <p align="center">
-  <img src="captures/dashboardpoll-lp.png" height="250"/>
-  <img src="captures/dashboard-hp.png" height="250"/>
-  <img src="captures/createpoll-hp.png" height="250"/>
-  <img src="captures/createpoll-hp2.png" height="250"/>
-  <img src="captures/detailpoll-hp.png" height="250"/>
+  <img src="captures/resultn-lp.png" height="150"/>
+  <img src="captures/result l-lp.png" height="150"/>
+  <img src="captures/resultn-hp.png" height="150"/>
+  <img src="captures/resultl-hp.png" height="150"/>
 </p>
 
 ---
