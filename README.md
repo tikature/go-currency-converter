@@ -24,9 +24,10 @@ Go Currency Converter is a **Golang-based** web application that allows users to
 ## 📸 Screenshots
 ### 🏠 Main Page
 <p align="center">
-  <img src="captures/home-lp.png" height="250"/>
-  <img src="captures/home-lp2.png" height="250"/>
-  <img src="captures/home-hp.png" height="250"/>
+  <img src="captures/homen-lp.png" height="200"/>
+  <img src="captures/homel-lp.png" height="200"/>
+  <img src="captures/homen-hp.png" height="200"/>
+  <img src="captures/homel-hp.png" height="200"/>
 </p>
 
 ---
