@@ -1,27 +1,25 @@
 # 💱 Go Currency Converter
 
-Go Currency Converter adalah aplikasi berbasis **Golang** yang memungkinkan pengguna untuk mengonversi nilai mata uang secara real-time menggunakan data kurs terkini.  
-Proyek ini dibangun untuk tujuan pembelajaran dan demonstrasi penerapan Go pada pengembangan aplikasi web.
+Go Currency Converter is a **Golang-based** web application that allows users to convert currency values in real-time using the latest exchange rates. This project was built as a learning exercise and a demonstration of implementing Go in web application development.
 
 ---
 
-## ✨ Fitur
-- Konversi nilai antar berbagai mata uang.
-- Pengambilan kurs secara real-time dari API eksternal.
-- Tampilan antarmuka web yang sederhana dan responsif.
-- Validasi input agar data yang dimasukkan benar.
-- Deploy di **Vercel** untuk akses publik.
+## ✨ Features
+- Convert values between multiple currencies.
+- Real-time exchange rate retrieval from an external API.
+- Simple and responsive web interface.
+- Input validation to ensure correct data entry.
+- Deployed on **Vercel** for public access.
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+## 🛠️ Tech Stack
 - **Backend:** Go (net/http)
 - **Frontend:** HTML, CSS, JavaScript
-- **API Kurs:** (Contoh) [ExchangeRate API](https://exchangerate.host/) atau API lain
+- **Exchange Rate API:** [ExchangeRate API](https://exchangerate.host/) or other
 - **Deployment:** Vercel
 
 ---
-
 
 ## 📸 Screenshots
 ### 🏠 Main Page
