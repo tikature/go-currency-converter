@@ -53,7 +53,7 @@ Go Currency Converter is a **Golang-based** web application that allows users to
 
 By **Dewi Atika Muthi**  
 📍 _Informatics Student, Telkom University_  
-📧 **Email:** detikaa10@fmail.com  
+📧 **Email:** detikaa10@gmail.com  
 🌐 **GitHub:** [@tikature](https://github.com/tikature)  
 
 💬 *"Design with simplicity, build with purpose."*
